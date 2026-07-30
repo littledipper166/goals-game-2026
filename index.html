@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Summer 2026 Goal Quest</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="game-container">
+
+        <header class="hero">
+            <p class="eyebrow">Summer 2026</p>
+            <h1>Goal Quest</h1>
+            <p class="subtitle">
+                Complete quests, earn XP, and unlock rewards.
+            </p>
+        </header>
+
+        <section class="player-card">
+            <div class="player-info">
+                <div>
+                    <p class="small-label">Player</p>
+                    <h2>Avy</h2>
+                </div>
+
+                <div class="level-display">
+                    <p class="small-label">Current Level</p>
+                    <p id="levelNumber" class="level-number">1</p>
+                </div>
+            </div>
+
+            <div class="xp-information">
+                <div class="xp-labels">
+                    <span id="xpText">0 / 100 XP</span>
+                    <span id="totalXpText">Total XP: 0</span>
+                </div>
+
+                <div
+                    class="xp-bar"
+                    role="progressbar"
+                    aria-label="Experience progress"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                >
+                    <div id="xpProgress" class="xp-progress"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span class="stat-icon">💪</span>
+                <p>Strength</p>
+                <strong id="strengthStat">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">📚</span>
+                <p>Knowledge</p>
+                <strong id="knowledgeStat">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">🌿</span>
+                <p>Wellness</p>
+                <strong id="wellnessStat">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">✝️</span>
+                <p>Faith</p>
+                <strong id="faithStat">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">💰</span>
+                <p>Wealth</p>
+                <strong id="wealthStat">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">✈️</span>
+                <p>Adventure</p>
+                <strong id="adventureStat">0</strong>
+            </article>
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <p class="small-label">Choose an activity</p>
+                <h2>Quest Board</h2>
+            </div>
+
+            <button id="resetButton" class="reset-button" type="button">
+                Reset Game
+            </button>
+        </section>
+
+        <nav class="filter-buttons" aria-label="Quest filters">
+            <button
+                class="filter-button active"
+                data-filter="all"
+                type="button"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="daily"
+                type="button"
+            >
+                Daily
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="weekly"
+                type="button"
+            >
+                Weekly
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="milestone"
+                type="button"
+            >
+                Milestones
+            </button>
+        </nav>
+
+        <section id="questList" class="quest-list"></section>
+
+        <section class="rewards-section">
+            <div class="section-heading">
+                <div>
+                    <p class="small-label">Level-up prizes</p>
+                    <h2>Reward Vault</h2>
+                </div>
+            </div>
+
+            <div id="rewardList" class="reward-list"></div>
+        </section>
+
+        <div
+            id="message"
+            class="message"
+            aria-live="polite"
+        ></div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
